@@ -14,7 +14,7 @@ logInBtn.addEventListener("click", function() {
     
 
    
-    window.location.assign("/home.html");
+    window.location.assign("home.html");
   } else {
    
     alert("login Failed");
