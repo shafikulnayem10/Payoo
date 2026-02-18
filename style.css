@@ -2,3 +2,50 @@
     
      font-family: "Outfit", sans-serif;
 }
+/* Smooth animation for all option buttons */
+.buttons .btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover scale */
+.buttons .btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Click press effect */
+.buttons .btn:active {
+    transform: scale(0.95);
+}
+.logo img {
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Page load animation */
+@keyframes fadeScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.buttons .btn {
+    animation: fadeScaleIn 0.5s ease forwards;
+}
+
+/* Slight delay for each button */
+.buttons .btn:nth-child(1) { animation-delay: 0.1s; }
+.buttons .btn:nth-child(2) { animation-delay: 0.2s; }
+.buttons .btn:nth-child(3) { animation-delay: 0.3s; }
+.buttons .btn:nth-child(4) { animation-delay: 0.4s; }
+.buttons .btn:nth-child(5) { animation-delay: 0.5s; }
+.buttons .btn:nth-child(6) { animation-delay: 0.6s; }
+.buttons .btn:nth-child(7) { animation-delay: 0.7s; }

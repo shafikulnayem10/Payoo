@@ -50,7 +50,7 @@
  <!-- welcome section starts -->
   <section class="w-11/12 mx-auto py-10 space-y-5">
         <h2 class="text-3xl font-bold">Welcome to Pay<span class="text-primary">oo</span></h2>
-        <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+        <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low  </p>
 
         <div class="buttons grid grid-cols-3 gap-3">
 
@@ -62,15 +62,18 @@
                 <img src="assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showOnly('send-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+
                 <img src="assets/opt-3.png" alt="">
                 <p>Send Money</p>
             </button>
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showOnly('get-bonus')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="assets/opt-4.png" alt="">
                 <p>Get Bonus</p>
             </button>
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <!-- <button class="btn flex-col h-full py-4 btn-primary btn-soft"> -->
+                <button onclick="showOnly('pay-bill')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+
                 <img src="assets/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
@@ -153,6 +156,100 @@
         </div>
     </section>
 <!-- cashout section ends -->
+ <!-- send money section starts -->
+    <section id="send-money" class="w-11/12 mx-auto py-5 hidden">
+          <h2 class="text-xl font-bold mb-5">Send Money</h2>
+          <div class="card bg-base-100 w-full shadow rounded-2xl">
+                <div class="card-body">
+                 <fieldset class="fieldset">
+                      <label class="label text-neutral font-bold">Receiver Number</label>
+                      <input id="send-money-number" maxlength="11" minlength="11" type="text"
+                            class="input rounded-full bg-base-200 w-full" value="01234567890"
+                            placeholder="Enter Receiver 11 digit Number" />
+    
+                      <br>
+    
+                      <label class="label text-neutral font-bold">Amount</label>
+    
+                      <input id="send-money-amount" type="number" class="input rounded-full bg-base-200 w-full"
+                            value="01234567890" placeholder="Enter Amount for Send" />
+    
+                      <br>
+    
+                      <label class="label text-neutral font-bold">4 Digit Pin</label>
+                      <input id="send-money-pin" type="password" maxlength="4" class="input rounded-full bg-base-200 w-full"
+                            placeholder="Enter 4 Digit Pin" />
+                      <div></div>
+                      <button id="send-money-btn" class="btn btn-primary mt-4 rounded-full">Send Money</button>
+                 </fieldset>
+                </div>
+          </div>
+     </section>
+<!-- send money section ends -->
+ <!-- get bonus section starts  -->
+    <section id="get-bonus" class="w-11/12 mx-auto py-5 hidden">
+        <h2 class="text-xl font-bold mb-5">Get Bonus</h2>
+        <div class="card bg-base-100 w-full shadow rounded-2xl">
+            <div class="card-body">
+                  <label class="label text-neutral font-bold">Enter Bonus Coupon Code</label>
+    
+                      <input id="get-bonus-coupon" type="text" class="input rounded-full bg-base-200 w-full"
+                            value="BONUS123" placeholder="Enter Bonus Coupon Code" />
+                        <div></div>
+                        <button id="get-bonus-btn" class="btn btn-primary mt-4 rounded-full">Get Bonus</button>
+            </div>
+        </div>
+    </section>
+    <!-- get bonus section ends  -->
+     <!-- pay bill section starts   -->
+    <section id="pay-bill" class="w-11/12 mx-auto py-5 hidden">
+    <h2 class="text-xl font-bold mb-5">Pay Bill</h2>
+    <div class="card bg-base-100 w-full shadow rounded-2xl">
+        <div class="card-body">
+            <fieldset class="fieldset">
+
+                <label class="label text-neutral font-bold">Select To Pay</label>
+                <select id="pay-bill-type" class="select w-full bg-base-200 rounded-full">
+                    <option disabled selected>Select bill type</option>
+                    <option value="Electricity">Electricity</option>
+                    <option value="Water">Water</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Gas">Gas</option>
+                </select>
+
+                <br>
+
+                <label class="label text-neutral font-bold">Biller Account Number</label>
+                <input id="pay-bill-account" type="text"
+                    class="input rounded-full bg-base-200 w-full"
+                    placeholder="Enter account number" />
+
+                <br>
+
+                <label class="label text-neutral font-bold">Amount to Pay</label>
+                <input id="pay-bill-amount" type="number"
+                    class="input rounded-full bg-base-200 w-full"
+                    placeholder="Add Amount to pay" />
+
+                <br>
+
+                <label class="label text-neutral font-bold">Pin Number</label>
+                <input id="pay-bill-pin" type="password" maxlength="4"
+                    class="input rounded-full bg-base-200 w-full"
+                    placeholder="Enter 4 digit pin number" />
+
+                <button id="pay-bill-btn" class="btn btn-primary mt-4 rounded-full">
+                    Pay Now
+                </button>
+
+            </fieldset>
+        </div>
+    </div>
+</section>
+
+        <!-- pay bill section ends   -->
+
+
  <!-- trasition section starts  -->
    <section id="transaction" class="w-11/12 mx-auto py-5 hidden">
         <h2 class="text-xl font-bold mb-5">Transactions</h2>
@@ -187,6 +284,11 @@
 <script src="scripts/machine.js"></script>
 <script src="scripts/addMoney.js"></script>
 <script src="scripts/cashOut.js"></script>
+<script src="scripts/sendMoney.js"></script>
+<script src="scripts/getBonus.js"></script>
+<script src="scripts/payBill.js"></script>
+
+
 
 
 </body>

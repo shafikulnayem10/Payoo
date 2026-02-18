@@ -24,7 +24,7 @@ function setBalance(value) {
 
 //machine id > hide all > show id
 function showOnly(id) {
-  const sections = ["add-money", "cashout", "transaction"];
+  const sections = ["add-money", "cashout", "transaction", "send-money", "get-bonus", "pay-bill"];
 
   sections.forEach(function (sectionId) {
     const section = document.getElementById(sectionId);
