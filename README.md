@@ -10,7 +10,7 @@ Built using **HTML, Tailwind CSS, DaisyUI, and Vanilla JavaScript**.
 
 🚀 **Live Site:** _Coming Soon_  
 
-
+For Log In : Use Mobile Number-01234567890 and PIN:1234
 ---
 
 ## 🚀 Features
