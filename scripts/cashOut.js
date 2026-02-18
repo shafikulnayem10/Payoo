@@ -72,16 +72,21 @@ cashoutBtn.addEventListener("click", function () {
     return;
   }
 
-  if (pin !== "1234") {
-    alert("Invalid PIN");
-    return;
-  }
+ if (pin !== "1234") {
+  alert("Invalid PIN");
+  return;
+}
 
-  // 4️ Process Cashout
-  const newBalance = currentBalance - amount;
-  setBalance(newBalance);
+const newBalance = currentBalance - amount;
+setBalance(newBalance);
 
-  alert("Cashout Successful");
+addTransaction("Cashout", cashoutNumber, amount, "Success");
+
+//  Auto show transaction
+//showOnly("transaction");
+
+alert("Cashout Successful");
+
 
 });
 

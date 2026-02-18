@@ -24,13 +24,36 @@ function setBalance(value) {
 
 //machine id > hide all > show id
 function showOnly(id) {
-  const addmoney = document.getElementById("add-money");
-  const cashout = document.getElementById("cashout");
-  
-  addmoney.classList.add("hidden");
-  cashout.classList.add("hidden");
+  const sections = ["add-money", "cashout", "transaction"];
 
-  
+  sections.forEach(function (sectionId) {
+    const section = document.getElementById(sectionId);
+    section.classList.add("hidden");
+  });
+
   const selected = document.getElementById(id);
   selected.classList.remove("hidden");
+
+  //  smooth scroll to selected section
+  selected.scrollIntoView({ behavior: "smooth" });
+}
+
+// Add transaction row
+function addTransaction(type, number, amount, status) {
+  const tbody = document.getElementById("transaction-table-body");
+
+  const tr = document.createElement("tr");
+
+  tr.innerHTML = `
+        <td>${type}</td>
+        <td>${number}</td>
+        <td>$${amount}</td>
+        <td>
+            <span class="font-bold ${status === "Success" ? "text-green-500" : "text-red-500"}">
+                ${status}
+            </span>
+        </td>
+    `;
+
+  tbody.appendChild(tr);
 }

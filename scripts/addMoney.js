@@ -17,14 +17,19 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   const newBalance = currentBalance + Number(amount);
 
   const pin = getValueFromInput("add-money-pin");
-  if (pin == "1234") {
-    alert(`Add Money Success from
-         ${bankAccount} 
-         at ${new Date()}`);
-    setBalance(newBalance);
-  } else {
-    alert("Invalid Pin");
+if (pin == "1234") {
+  alert(`Add Money Success from ${bankAccount}`);
 
-    return;
-  }
+  setBalance(newBalance);
+
+  addTransaction("Add Money", accno, amount, "Success");
+
+  //  Auto show transaction
+  //showOnly("transaction");
+
+} else {
+  alert("Invalid Pin");
+  return;
+}
+
 });

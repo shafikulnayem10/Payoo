@@ -74,7 +74,7 @@
                 <img src="assets/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showOnly('transaction')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="assets/opt-6.png" alt="">
                 <p>Transactions</p>
             </button>
@@ -153,6 +153,37 @@
         </div>
     </section>
 <!-- cashout section ends -->
+ <!-- trasition section starts  -->
+   <section id="transaction" class="w-11/12 mx-auto py-5 hidden">
+        <h2 class="text-xl font-bold mb-5">Transactions</h2>
+        <div class="card bg-base-100 w-full shadow rounded-2xl">
+            <div class="card-body">
+                <table class="table w-full">
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Number</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transaction-table-body">
+                        <!-- row 1 -->
+                        <!-- <tr>
+                            <td>Cashout</td>
+                            <td>01234567890</td>
+                            <td>$5000</td>
+                            <td><span class="text-green-500 font-bold">Success</span></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </section>
+<!-- trasition section ends  -->
+
 <script src="scripts/machine.js"></script>
 <script src="scripts/addMoney.js"></script>
 <script src="scripts/cashOut.js"></script>
