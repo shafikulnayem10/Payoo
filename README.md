@@ -115,7 +115,7 @@ Each successful transaction:
 ## ⚠️ Disclaimer
 
 This is a frontend simulation project only.  
-No real payment gateway or backend integration is implemented.
+No real payment gateway and backend integration is implemented.
 
 ---
 
