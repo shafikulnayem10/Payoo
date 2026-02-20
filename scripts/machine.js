@@ -23,19 +23,26 @@ function setBalance(value) {
 }
 
 //machine id > hide all > show id
-function showOnly(id) {
+function showOnly(id, clickedBtn) {
+
   const sections = ["add-money", "cashout", "transaction", "send-money", "get-bonus", "pay-bill"];
 
+  // hide all sections
   sections.forEach(function (sectionId) {
-    const section = document.getElementById(sectionId);
-    section.classList.add("hidden");
+    document.getElementById(sectionId).classList.add("hidden");
   });
 
-  const selected = document.getElementById(id);
-  selected.classList.remove("hidden");
+  // show selected section
+  document.getElementById(id).classList.remove("hidden");
 
-  //  smooth scroll to selected section
-  selected.scrollIntoView({ behavior: "smooth" });
+  // remove active style from all buttons
+  const buttons = document.querySelectorAll(".menu-btn");
+  buttons.forEach(function (btn) {
+    btn.classList.remove("btn-active");
+  });
+
+  // add active style to clicked button
+  clickedBtn.classList.add("btn-active");
 }
 
 // Add transaction row

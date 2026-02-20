@@ -47,44 +47,65 @@
 <!-- header ends -->
 
 
- <!-- welcome section starts -->
-  <section class="w-11/12 mx-auto py-10 space-y-5">
-        <h2 class="text-3xl font-bold">Welcome to Pay<span class="text-primary">oo</span></h2>
-        <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low  </p>
+<!-- welcome section starts -->
+<section class="w-11/12 mx-auto py-10 space-y-5">
 
-        <div class="buttons grid grid-cols-3 gap-3">
+  <h2 class="text-3xl font-bold">
+    Welcome to Pay<span class="text-primary">oo</span>
+  </h2>
 
-            <button onclick="showOnly('add-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">
-                <img src="assets/opt-1.png" alt="">
-                <p>Add Money</p>
-            </button>
-            <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4 btn-primary btn-soft">
-                <img src="assets/opt-2.png" alt="">
-                <p>Cashout</p>
-            </button>
-            <button onclick="showOnly('send-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+  <p class="text-neutral/50">
+    Enjoy easy and convenient financial services with us. Cashout charge is low
+  </p>
 
-                <img src="assets/opt-3.png" alt="">
-                <p>Send Money</p>
-            </button>
-            <button onclick="showOnly('get-bonus')" class="btn flex-col h-full py-4 btn-primary btn-soft">
-                <img src="assets/opt-4.png" alt="">
-                <p>Get Bonus</p>
-            </button>
-            <!-- <button class="btn flex-col h-full py-4 btn-primary btn-soft"> -->
-                <button onclick="showOnly('pay-bill')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+  <div class="buttons grid grid-cols-3 gap-3">
 
-                <img src="assets/opt-5.png" alt="">
-                <p>Pay Bill</p>
-            </button>
-            <button onclick="showOnly('transaction')" class="btn flex-col h-full py-4 btn-primary btn-soft">
-                <img src="assets/opt-6.png" alt="">
-                <p>Transactions</p>
-            </button>
+    <!-- Add Money -->
+    <button onclick="showOnly('add-money', this)"
+      class="menu-btn btn flex-col h-full py-4 btn-primary btn-soft btn-active">
+      <img src="assets/opt-1.png" alt="">
+      <p>Add Money</p>
+    </button>
 
-        </div>
-    </section>
+    <!-- Cashout -->
+    <button onclick="showOnly('cashout', this)"
+      class="menu-btn btn flex-col h-full py-4 btn-primary btn-soft">
+      <img src="assets/opt-2.png" alt="">
+      <p>Cashout</p>
+    </button>
+
+    <!-- Send Money -->
+    <button onclick="showOnly('send-money', this)"
+      class="menu-btn btn flex-col h-full py-4 btn-primary btn-soft">
+      <img src="assets/opt-3.png" alt="">
+      <p>Send Money</p>
+    </button>
+
+    <!-- Get Bonus -->
+    <button onclick="showOnly('get-bonus', this)"
+      class="menu-btn btn flex-col h-full py-4 btn-primary btn-soft">
+      <img src="assets/opt-4.png" alt="">
+      <p>Get Bonus</p>
+    </button>
+
+    <!-- Pay Bill -->
+    <button onclick="showOnly('pay-bill', this)"
+      class="menu-btn btn flex-col h-full py-4 btn-primary btn-soft">
+      <img src="assets/opt-5.png" alt="">
+      <p>Pay Bill</p>
+    </button>
+
+    <!-- Transactions -->
+    <button onclick="showOnly('transaction', this)"
+      class="menu-btn btn flex-col h-full py-4 btn-primary btn-soft">
+      <img src="assets/opt-6.png" alt="">
+      <p>Transactions</p>
+    </button>
+
+  </div>
+</section>
 <!-- welcome section ends -->
+ 
  <!-- add money section starts -->
    <section id="add-money" class="w-11/12 mx-auto py-5 hidden">
         <h2 class="text-xl font-bold mb-5">Add Money</h2>
